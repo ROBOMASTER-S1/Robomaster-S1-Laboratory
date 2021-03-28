@@ -16,6 +16,11 @@ chassis=chassis_ctrl
 media=media_ctrl
 define=rm_define
 
+# Please note: Most of these variables and strings below are not part of this
+# Python program example. These variables and strings were used for other 
+# Robomaster S1 experiments. look for variables and strings that aren't used
+# within this Python program example before you delete any of them.
+
 rotate_speed=20,30,40,50,60
 scan_speed=40;drive_speed=.0
 wheel_degree=0,180,90,-90,45,-45,135,-135
