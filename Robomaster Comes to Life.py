@@ -80,6 +80,7 @@ RGB1=[
 
 RGB2=[
     [],         # empty list box
+    [l2,l2,l2], # RGB White
     [l2,l1,l1], # RGB Red
     [l2,l2,l1], # RGB Yellow
     [l1,l1,l2], # RGB Blue
@@ -139,8 +140,7 @@ def start():
                     gimbal.rotate_with_degree(define.gimbal_right,randrotate)
 
                     if commands_exit==a:continue
-                    elif commands_exit==b:robot.set_mode(define.robot_mode_chassis_follow)
-                    break
+                    elif commands_exit==b:break
 
         gimbal_free_mode_right()
 
@@ -171,8 +171,7 @@ def start():
                     gimbal.rotate_with_degree(define.chassis_left,randrotate)
 
                     if commands_exit==a:continue
-                    elif commands_exit==b:robot.set_mode(define.robot_mode_chassis_follow)
-                    break
+                    elif commands_exit==b:break
 
         gimbal_free_mode_left()
 
@@ -207,8 +206,7 @@ def start():
                     chassis.rotate_with_degree(define.clockwise,randrotate)
 
                     if commands_exit==a:continue
-                    elif commands_exit==b:robot.set_mode(define.robot_mode_chassis_follow)
-                    break
+                    elif commands_exit==b:break
 
         chassis_free_mode_right()
 
@@ -239,8 +237,7 @@ def start():
                     chassis.rotate_with_degree(define.anticlockwise,randrotate)
 
                     if commands_exit==a:continue
-                    elif commands_exit==b:robot.set_mode(define.robot_mode_chassis_follow)
-                    break
+                    elif commands_exit==b:break
 
         chassis_free_mode_left()
 
@@ -294,8 +291,7 @@ def start():
                     elif randwheel==-135:chassis.move_with_time(wheel_degree[4],seconds)
 
                     if commands_exit==a:continue
-                    elif commands_exit==b:robot.set_mode(define.robot_mode_chassis_follow)
-                    break
+                    elif commands_exit==b:break
 
         chassis_follow_gimbal_right()
 
@@ -345,8 +341,7 @@ def start():
                     elif randwheel==-135:chassis.move_with_time(wheel_degree[4],seconds)
 
                     if commands_exit==a:continue
-                    elif commands_exit==b:robot.set_mode(define.robot_mode_chassis_follow)
-                    break
+                    elif commands_exit==b:break
 
         chassis_follow_gimbal_left()
 
@@ -544,8 +539,7 @@ def start():
 
                     led.set_bottom_led(define.armor_bottom_all,
                     RGB1[-i][0],RGB1[-i][1],RGB1[-i][2],define.effect_always_on)
-                    time.sleep(delay)
-                    led.gun_led_off()
+                    time.sleep(delay);led.gun_led_off()
                 x+=1
 
                 if commands_exit==a:continue
@@ -572,8 +566,7 @@ def start():
 
                     led.set_bottom_led(define.armor_bottom_all,
                     RGB1[-i][0],RGB1[-i][1],RGB1[-i][2],define.effect_always_on)
-                    time.sleep(delay)
-                    led.gun_led_off()
+                    time.sleep(delay);led.gun_led_off()
                 x+=1
 
                 if commands_exit==a:continue
@@ -603,8 +596,7 @@ def start():
 
                     led.set_bottom_led(define.armor_bottom_all,
                     RGB1[-i][0],RGB1[-i][1],RGB1[-i][2],define.effect_always_on)
-                    time.sleep(delay)
-                    led.gun_led_off()
+                    time.sleep(delay);led.gun_led_off()
                 x+=1
 
                 if commands_exit==a:continue
@@ -630,8 +622,7 @@ def start():
 
                     led.set_bottom_led(define.armor_bottom_all,
                     RGB1[-i][0],RGB1[-i][1],RGB1[-i][2],define.effect_always_on)
-                    time.sleep(delay)
-                    led.gun_led_off()
+                    time.sleep(delay);led.gun_led_off()
                 x+=1
 
                 if commands_exit==a:continue
@@ -661,8 +652,7 @@ def start():
 
                     led.set_bottom_led(define.armor_bottom_all,
                     RGB1[-i][0],RGB1[-i][1],RGB1[-i][2],define.effect_always_on)
-                    time.sleep(delay)
-                    led.gun_led_off()
+                    time.sleep(delay);led.gun_led_off()
                 x+=1
 
                 if commands_exit==a:continue
@@ -688,8 +678,7 @@ def start():
 
                     led.set_bottom_led(define.armor_bottom_all,
                     RGB1[-i][0],RGB1[-i][1],RGB1[-i][2],define.effect_always_on)
-                    time.sleep(delay)
-                    led.gun_led_off()
+                    time.sleep(delay);led.gun_led_off()
                 x+=1
 
                 if commands_exit==a:continue
@@ -723,8 +712,7 @@ def start():
         led.set_flash(define.armor_all,blink_rate[4])
         led.set_top_led(define.armor_top_all,l2,l1,l2,define.effect_flash)
         led.set_bottom_led(define.armor_bottom_all,l2,l1,l2,define.effect_flash)
-        gimbal.recenter()
-        led.gun_led_off()
+        gimbal.recenter();led.gun_led_off()
 
 # rgb_colour_trail_chasers_forward_reverse:
 
@@ -735,7 +723,7 @@ def start():
             robot.set_mode(define.robot_mode_free)
             gimbal.set_rotate_speed(rotate_speed[2])
 
-            for i in range(1,7):
+            for i in range(1,8):
                 commands_exit=random.randint(a,b)
                 led.gun_led_on()
                 led.set_top_led(define.armor_top_all,
@@ -768,7 +756,7 @@ def start():
 
             gimbal.rotate(define.gimbal_left)
 
-            for i in range(1,7):
+            for i in range(1,8):
                 commands_exit=random.randint(a,b)
                 led.gun_led_on()
                 led.set_top_led(define.armor_top_all,
@@ -794,6 +782,144 @@ def start():
 
         rgb_colour_trail_chasers_reverse()
 
+# rgb_colour_trail_chasers_reverse_forward:
+
+    def rgb_colour_trail_chasers_reverse_forward():        
+
+        def rgb_colour_trail_chasers_reverse():
+
+            robot.set_mode(define.robot_mode_free)
+            gimbal.set_rotate_speed(rotate_speed[2])
+
+            gimbal.rotate(define.gimbal_left)
+
+            for i in range(1,8):
+                commands_exit=random.randint(a,b)
+                led.gun_led_on()
+                led.set_top_led(define.armor_top_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_off)
+
+                led.set_bottom_led(define.armor_bottom_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_flash)
+                gimbal.rotate(define.gimbal_left)
+
+                for i in range(8,0,-1):
+                    led.set_single_led(define.armor_top_all,
+                    [i],define.effect_always_on)
+                    time.sleep(delay1)
+                led.gun_led_off()
+
+                for i in range(8,0,-1):
+                    led.set_single_led(define.armor_top_all,
+                    [i],define.effect_always_off)
+                    time.sleep(delay1)
+
+                if commands_exit==a:continue
+                elif commands_exit==b:break
+
+        rgb_colour_trail_chasers_reverse()
+
+        def rgb_colour_trail_chasers_forward():
+
+            robot.set_mode(define.robot_mode_free)
+            gimbal.set_rotate_speed(rotate_speed[2])
+
+            for i in range(1,8):
+                commands_exit=random.randint(a,b)
+                led.gun_led_on()
+                led.set_top_led(define.armor_top_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_off)
+
+                led.set_bottom_led(define.armor_bottom_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_flash)
+                gimbal.rotate(define.gimbal_right)
+
+                for i in range(1,9):
+                    led.set_single_led(define.armor_top_all,
+                    [i],define.effect_always_on)
+                    time.sleep(delay1)
+                led.gun_led_off()
+
+                for i in range(1,9):
+                    led.set_single_led(define.armor_top_all,
+                    [i],define.effect_always_off)
+                    time.sleep(delay1)
+
+                if commands_exit==a:continue
+                elif commands_exit==b:break
+
+        rgb_colour_trail_chasers_forward()
+
+# rgb__flash_colour_changers_forward_reverse:
+
+    def rgb_flash_colour_changers_forward_reverse():
+
+        def rgb_flash_colour_changers_forward():
+            
+            for i in range(1,8):
+                commands_exit=random.randint(a,b)
+                led.set_top_led(define.armor_top_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_on)
+
+                led.set_bottom_led(define.armor_bottom_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_on)
+                time.sleep(second)
+
+                if commands_exit==a:continue
+                elif commands_exit==b:break
+
+        rgb_flash_colour_changers_forward()
+
+        def rgb_flash_colour_changers_reverse():
+            
+            for i in range(6,0,-1):
+                commands_exit=random.randint(a,b)
+                led.set_top_led(define.armor_top_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_on)
+
+                led.set_bottom_led(define.armor_bottom_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_on)
+                time.sleep(second)
+
+                if commands_exit==a:continue
+                elif commands_exit==b:break
+   
+        rgb_flash_colour_changers_reverse()
+
+# rgb__flash_colour_changers_reverse_forward:
+
+    def rgb_flash_colour_changers_reverse_forward():
+        
+        def rgb_flash_colour_changers_reverse():
+            for i in range(7,0,-1):
+                commands_exit=random.randint(a,b)
+                led.set_top_led(define.armor_top_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_on)
+
+                led.set_bottom_led(define.armor_bottom_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_on)
+                time.sleep(second)
+
+                if commands_exit==a:continue
+                elif commands_exit==b:break
+   
+        rgb_flash_colour_changers_reverse()
+
+        def rgb_flash_colour_changers_forward():
+            for i in range(1,8):
+                commands_exit=random.randint(a,b)
+                led.set_top_led(define.armor_top_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_on)
+
+                led.set_bottom_led(define.armor_bottom_all,
+                RGB2[i][0],RGB2[i][1],RGB2[i][2],define.effect_always_on)
+                time.sleep(second)
+
+                if commands_exit==a:continue
+                elif commands_exit==b:break
+
+        rgb_flash_colour_changers_forward()
+
 # Led_Flashers:
 
     def led_flashers():
@@ -817,27 +943,31 @@ def start():
             x+=1
 
     robot_start()
-
+    
     while True:
         randloop=random.randint(1,3)
-        randfunc=random.randint(1,40)
+        randfunc=random.randint(1,41)
+        chassis.stop()
 
         if randfunc==3:
             for i in range(randloop):
                 chassis_follow_gimbal()
 
         elif randfunc==1:blaster_fire()
-        elif randfunc==4:led_flashers()
-        elif randfunc==40:sleep_mode()
+        elif randfunc==13:led_flashers()
+        elif randfunc==41:sleep_mode()
         elif randfunc==35:scan_search()
-        elif randfunc==2:gimbal_free_mode()
-        elif randfunc==4:chassis_free_mode()
-        elif randfunc==5:quad_led_gimbal_rotation_up()
-        elif randfunc==6:single_led_gimbal_rotation_right_left()
-        elif randfunc==7:single_led_gimbal_rotation_left_right()
-        elif randfunc==8:double_led_gimbal_rotation_right_left()
-        elif randfunc==9:double_led_gimbal_rotation_left_right()
-        elif randfunc==11:rgb_colour_trail_chasers_forward_reverse()
+        elif randfunc==1:gimbal_free_mode()
+        elif randfunc==2:chassis_free_mode()
+        elif randfunc==4:quad_led_gimbal_rotation_up()
+        elif randfunc==5:single_led_gimbal_rotation_right_left()
+        elif randfunc==6:single_led_gimbal_rotation_left_right()
+        elif randfunc==7:double_led_gimbal_rotation_right_left()
+        elif randfunc==8:double_led_gimbal_rotation_left_right()
+        elif randfunc==9:rgb_colour_trail_chasers_forward_reverse()
+        elif randfunc==10:rgb_colour_trail_chasers_reverse_forward()
+        elif randfunc==11:rgb_flash_colour_changers_forward_reverse()
+        elif randfunc==12:rgb_flash_colour_changers_reverse_forward()
 
 def armor_hit_detection_all(msg):
 
