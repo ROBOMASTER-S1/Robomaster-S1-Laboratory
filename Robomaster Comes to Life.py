@@ -95,11 +95,12 @@ RGB2=[
     [l1,l2,l2], # RGB Cyan
     ]
 
-# Robomster S1 Start:
 def start():
     media.enable_sound_recognition(define.sound_detection_applause)
     armor.set_hit_sensitivity(10)
-    
+
+# Robomster S1 Start:
+   
     def robomaster_s1_start():
         led.gun_led_off()
         led.set_top_led(define.armor_top_all,l2,l1,l1,define.effect_breath)
