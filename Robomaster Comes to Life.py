@@ -710,11 +710,11 @@ def start():
         elif randfunc==3:chassis_follow_gimbal_right_left()
         elif randfunc==4:blaster_fire()
         elif randfunc==35:scan_search_right_left()
-        elif randfunc==6:single_led_chassis_follow_gimbal_rotation_right_left()
-        elif randfunc==7:double_led_chassis_follow_gimbal_rotation_right_left()
-        elif randfunc==8:quad_led_gimbal_rotation_up_down()
-        elif randfunc==9:rgb_colour_trail_chasers_forward_reverse()
-        elif randfunc==11:rgb_flash_colour_changers_forward_reverse()
+        elif randfunc==5:single_led_chassis_follow_gimbal_rotation_right_left()
+        elif randfunc==6:double_led_chassis_follow_gimbal_rotation_right_left()
+        elif randfunc==7:quad_led_gimbal_rotation_up_down()
+        elif randfunc==8:rgb_colour_trail_chasers_forward_reverse()
+        elif randfunc==9:rgb_flash_colour_changers_forward_reverse()
         elif randfunc==34:sleep_mode()
 
 def armor_hit_detection_all(msg):
