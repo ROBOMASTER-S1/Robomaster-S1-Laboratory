@@ -1,3 +1,23 @@
+'''Robomaster S1 Comes to Life upgrade 3.0'''
+
+# Make Robomaster S1 come to life. Simply copy or download this program example.
+
+# You must copy and paste the program code into your Robomaster app. After that,
+# simply click the blue play button, then clap your hands three times to wake him
+# up. To make him sleep, simply tap any one of his bottom hit detectors.
+
+# This Robomaster program example uses two powerful random generator options,
+# the random.randint() and the random.choice() functions. These two, random
+# generator functions are what make the Robomaster S1 come to life.
+
+# To avoid damaging your Robomaster S1, never set any speeds higher than they
+# are shown here, especially in smaller play areas. Note: be cautious when setting
+# the drive_speed variable higher than 0.2 and the seconds variable, who's default
+# is 1 second per drive time distance.
+
+# IMPORTANT! Never pick up or move the Robomaster S1, while its program is
+# running. Doing so may cause damage to the unit; you must stop the program first.
+
 # Robomaster S1 features illustrated here are as follows:
 
 # Robomster S1 Start
