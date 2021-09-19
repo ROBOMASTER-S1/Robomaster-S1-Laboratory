@@ -1,6 +1,5 @@
 # My Python Brush Up Skills:
 
-
 # Easy Counting Python Program Example:
 
 say=('Enter any mumber and I will count to it \
