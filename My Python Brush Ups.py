@@ -1,4 +1,4 @@
-# My Python Brush Ups:
+# My Brush Ups!
 
 condition=False
 if condition:x=1
@@ -9,15 +9,23 @@ condition=False
 x=1 if condition else 0
 print(x)
 
-student={
-'first_name':'Noyb','last_name':'Byon',
-'Computer Science':['Programming','Robotics']}
+first_name='first name'
+last_name='last name'
+first='Noyb';last='Byon'
+dream_job='Computer Science'
+program='Programming'
+robot='Robotics'
+not_found='Not Found:'
 
-print(student.get('first_name','Not Found:'))
-print(student.get('last_name','Not Found:'))
+student={
+first_name:first,last_name:last,
+dream_job:[program,robot]}
+
+print(student.get(first_name,not_found))
+print(student.get(last_name,not_found))
 
 for i in range(2):
-        print(student.get('Computer Science')[i])
+        print(student.get(dream_job)[i])
 
 name_index=['Rob','Bob','Tom']
 for i, name_index in enumerate(name_index,start=1):
