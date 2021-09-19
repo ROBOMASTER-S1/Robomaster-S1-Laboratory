@@ -39,8 +39,24 @@ for i,j in enumerate(fname_index):
         print(f'{j} {person}')
 
 for i,j in zip(fname_index,lname_index):
-        print(f'{i} {j}')              
+        print(f'{i} {j}')
 
 dictionary={1:'One',2:'Two',3:'Three'}
 for key,dictionary in dictionary.items():
         print('Key',key,'is',dictionary,'.')
+
+Scientist=[
+'Stephen Hawking','Albert Einstein',
+'Isaac Newton','Galileo Galilei']
+
+Profession=[
+'Theoretical Physicist and Cosmologist',
+'Theoretical Physicist','Mathematician, Physicist, \
+Astronomer and Theologian','Astronomer, \
+Physicist and Engineer']
+
+college_university=['Cambridge',
+'Eth Zurich',"The King's School",'Pisa']
+
+for s,p,cu in zip(Scientist,Profession,college_university):
+        print(f'{s} is {p} and went to {cu}')
