@@ -21,7 +21,7 @@
 
 # Robomaster S1 feature functions illustrated here are as follows:
 
-# Robomster S1 Start Function
+# Robomster S1 Comes to Life Function with sound effect
 # Robot All Wheel Omn directional Drive Function
 # Gimbal Free Mode Right Left Function
 # Chassis Follow Gimbal Right Left Function
@@ -221,7 +221,7 @@ def start():
     media_enable_disable[1](define_detection_applause)
     armor_set_sensitivity(10)
 
-# Robomster S1 comes to life Function:
+# Robomster S1 Comes to Life Function:
 
     def robomaster_s1_comes_to_life():
         for i in range(2):
