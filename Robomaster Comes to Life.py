@@ -36,6 +36,7 @@
 # RGB Colour Changers Forward Reverse Function
 # RGB Flash Colour Changers Function
 # RGB Colour Flasher Functions
+# RGB Colour Flipper Functions
 # RGB Colour Dimmer Functions
 
 # User Interaction Features:
@@ -116,7 +117,7 @@ wheel_degree=0,180,90,-90,45,-45,135,-135
 l1,l2=0,255;blink_rate=2,3,4,5,6,8
 scan_speed=50;drive_speed=.3
 rotate_speed=20,30,40,50,60,80
-seconds,milli_seconds=1,.1
+seconds,milli_seconds=2,.1
 delay1,delay2,delay3=1,.1,.05
 a,b,c=1,2,3
 
