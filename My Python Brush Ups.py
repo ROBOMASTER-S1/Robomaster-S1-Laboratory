@@ -1,8 +1,17 @@
 # My Python Brush Ups:
 
+condition=False
+if condition:x=1
+else:x=0
+print(x)
+
+condition=False
+x=1 if condition else 0
+print(x)
+
 student={
-        'first_name':'Noyb','last_name':'Byon',
-        'Computer Science':['Programming','Robotics']}
+'first_name':'Noyb','last_name':'Byon',
+'Computer Science':['Programming','Robotics']}
 
 print(student.get('first_name','Not Found:'))
 print(student.get('last_name','Not Found:'))
