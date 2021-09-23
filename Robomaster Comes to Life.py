@@ -6,10 +6,10 @@
 # simply click the blue play button, then clap your hands three times to wake him
 # up. To make him sleep, simply tap any one of his bottom hit detectors.
 
-# This Robomaster S1 program example uses three powerful random generator
-# functions. The random.randint(), the random.choice() and the random.choices()
-# functions. These three random generator functions are what make the Robomaster
-# S1 come to life and appear to have a mind of its own.
+# This Robomaster S1 program example uses four powerful random generator
+# functions. The random.randint(), the random.choice(), the random.choices() and
+# random.shuffle() functions. These four random generator functions are what make
+# the Robomaster S1 come to life and appear to have a mind of its own.
 
 # To avoid damaging your Robomaster S1, never set any speeds higher than they
 # are shown here, especially in smaller play areas. Note: be cautious when setting
@@ -64,52 +64,52 @@ define=rm_define
 led_set_flash=(led_ctrl.set_flash)
 
 led_set_top_bottom=(
-    led_ctrl.set_top_led,
-    led_ctrl.set_bottom_led)
+led_ctrl.set_top_led,
+led_ctrl.set_bottom_led)
 
 gun_led_on_off=(
-    led_ctrl.gun_led_off,
-    led.gun_led_on)
+led_ctrl.gun_led_off,
+led.gun_led_on)
 
 define_armor_all=(rm_define.armor_all)
 
 define_armor_top_bottom_all=(
-    rm_define.armor_top_all,
-    rm_define.armor_bottom_all)
+rm_define.armor_top_all,
+rm_define.armor_bottom_all)
 
 define_armor_top_right_left=(
-    rm_define.armor_top_right,
-    rm_define.armor_top_left)
+rm_define.armor_top_right,
+rm_define.armor_top_left)
 
 define_armor_bottom_right_left=(
-    rm_define.armor_bottom_right,
-    rm_define.armor_bottom_left)
+rm_define.armor_bottom_right,
+rm_define.armor_bottom_left)
 
 define_armor_bottom_front_back=(
-    rm_define.armor_bottom_front,
-    rm_define.armor_bottom_back)
+rm_define.armor_bottom_front,
+rm_define.armor_bottom_back)
 
 define_effect=(
-    rm_define.effect_always_off,
-    rm_define.effect_always_on,
-    rm_define.effect_flash,
-    rm_define.effect_breath,
-    rm_define.effect_marquee)
+rm_define.effect_always_off,
+rm_define.effect_always_on,
+rm_define.effect_flash,
+rm_define.effect_breath,
+rm_define.effect_marquee)
 
 media_enable_disable=(
-    media_ctrl.disable_sound_recognition,
-    media_ctrl.enable_sound_recognition)
+media_ctrl.disable_sound_recognition,
+media_ctrl.enable_sound_recognition)
 
 media_wait=(media_ctrl.cond_wait)
 
 media_play_sound=(media_ctrl.play_sound)
 
 define_detection_applause=(
-    rm_define.sound_detection_applause)
+rm_define.sound_detection_applause)
 
 define_sound_recognized_twice_thrice=(
-    rm_define.cond_sound_recognized_applause_twice,
-    rm_define.cond_sound_recognized_applause_thrice)
+rm_define.cond_sound_recognized_applause_twice,
+rm_define.cond_sound_recognized_applause_thrice)
 
 armor_set_sensitivity=(armor_ctrl.set_hit_sensitivity)
 
@@ -122,99 +122,99 @@ delay1,delay2,delay3=1,.1,.05
 a,b,c=1,2,3
 
 RGB_COLOURS=[
-    [],         # empty list box
-    [l2,l2,l2], # RGB White
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    [l2,l1,l2], # RGB Pink
-    [l1,l2,l2], # RGB Cyan
-    ]
+[],         # empty list box
+[l2,l2,l2], # RGB White
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+[l2,l1,l2], # RGB Pink
+[l1,l2,l2], # RGB Cyan
+]
 
 RGB_RY=[
-    [],         # empty list box
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    ]
+[],         # empty list box
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+]
 
 RGB_YR=[
-    [],         # empty list box
-    [l2,l2,l1], # RGB Yellow
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l2,l1,l1], # RGB Red
-    ]
+[],         # empty list box
+[l2,l2,l1], # RGB Yellow
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l2,l1,l1], # RGB Red
+]
 
 RGB_BG=[
-    [],         # empty list box
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    ]
+[],         # empty list box
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+]
 
 RGB_GB=[
-    [],         # empty list box
-    [l1,l2,l1], # RGB Green
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    [l1,l1,l2], # RGB Blue
-    ]
+[],         # empty list box
+[l1,l2,l1], # RGB Green
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+[l1,l1,l2], # RGB Blue
+]
 
 RGB_PC=[
-    [],         # empty list box
-    [l2,l1,l2], # RGB Pink
-    [l1,l2,l2], # RGB Cyan
-    [l2,l1,l2], # RGB Pink
-    [l1,l2,l2], # RGB Cyan
-    [l2,l1,l2], # RGB Pink
-    [l1,l2,l2], # RGB Cyan
-    [l2,l1,l2], # RGB Pink
-    [l1,l2,l2], # RGB Cyan
-    ]
+[],         # empty list box
+[l2,l1,l2], # RGB Pink
+[l1,l2,l2], # RGB Cyan
+[l2,l1,l2], # RGB Pink
+[l1,l2,l2], # RGB Cyan
+[l2,l1,l2], # RGB Pink
+[l1,l2,l2], # RGB Cyan
+[l2,l1,l2], # RGB Pink
+[l1,l2,l2], # RGB Cyan
+]
 
 RGB_CP=[
-    [],         # empty list box
-    [l1,l2,l2], # RGB Cyan
-    [l2,l1,l2], # RGB Pink
-    [l1,l2,l2], # RGB Cyan
-    [l2,l1,l2], # RGB Pink
-    [l1,l2,l2], # RGB Cyan
-    [l2,l1,l2], # RGB Pink
-    [l1,l2,l2], # RGB Cyan
-    [l2,l1,l2], # RGB Pink
-    ]
+[],         # empty list box
+[l1,l2,l2], # RGB Cyan
+[l2,l1,l2], # RGB Pink
+[l1,l2,l2], # RGB Cyan
+[l2,l1,l2], # RGB Pink
+[l1,l2,l2], # RGB Cyan
+[l2,l1,l2], # RGB Pink
+[l1,l2,l2], # RGB Cyan
+[l2,l1,l2], # RGB Pink
+]
 
 RGB_RYBG=[
-    [],         # empty list box
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    [l2,l1,l1], # RGB Red
-    [l2,l2,l1], # RGB Yellow
-    [l1,l1,l2], # RGB Blue
-    [l1,l2,l1], # RGB Green
-    ]
+[],         # empty list box
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+[l2,l1,l1], # RGB Red
+[l2,l2,l1], # RGB Yellow
+[l1,l1,l2], # RGB Blue
+[l1,l2,l1], # RGB Green
+]
 
 def start():
     gun_led_on_off[0]()
@@ -310,8 +310,6 @@ def start():
                     if commands_exit==a:continue
                     elif commands_exit==b:break
 
-        robot_all_wheel_omni_directional_drive_right()
-
         def robot_all_wheel_omni_directional_drive_left():
             while True:
                 randspeed=random.choice(rotate_speed)
@@ -372,7 +370,14 @@ def start():
                     if commands_exit==a:continue
                     elif commands_exit==b:break
 
-        robot_all_wheel_omni_directional_drive_left()
+        func_list=[
+        robot_all_wheel_omni_directional_drive_right,
+        robot_all_wheel_omni_directional_drive_left]
+
+        randloop=random.randint(0,4)
+        for i in range(randloop):
+            random.shuffle(func_list)
+            func_list[0]()
 
 # Gimbal Free Mode Right Left Function:
 
@@ -415,8 +420,6 @@ def start():
                     if commands_exit==a:continue
                     elif commands_exit==b:break
 
-        gimbal_free_mode_right()
-
         def gimbal_free_mode_left():
             while True:
                 randspeed=random.choice(rotate_speed)
@@ -453,7 +456,12 @@ def start():
                     if commands_exit==a:continue
                     elif commands_exit==b:break
 
-        gimbal_free_mode_left()
+        func_list=[gimbal_free_mode_right,gimbal_free_mode_left]
+
+        randloop=random.randint(0,4)
+        for i in range(randloop):
+            random.shuffle(func_list)
+            func_list[0]()
 
 # Chassis Follow Gimbal Right Left Function:
 
@@ -496,8 +504,6 @@ def start():
                     if commands_exit==a:continue
                     elif commands_exit==b:break
 
-        chassis_follow_gimbal_right()
-
         def chassis_follow_gimbal_left():
             while True:
                 randspeed=random.choice(rotate_speed)
@@ -534,7 +540,12 @@ def start():
                     if commands_exit==a:continue
                     elif commands_exit==b:break
 
-        chassis_follow_gimbal_left()
+        func_list=[chassis_follow_gimbal_right,chassis_follow_gimbal_left]
+
+        randloop=random.randint(0,4)
+        for i in range(randloop):
+            random.shuffle(func_list)
+            func_list[0]()
 
 # Dance Rock Function:
 
@@ -596,7 +607,7 @@ def start():
             gun_led_on_off[0]()
 
             if commands_exit==a:continue
-            elif commands_exit==b:                
+            elif commands_exit==b:
                 led_set_flash(define_armor_all,6)
                 get_value={1:4,2:2}
                 for i in range(2):
@@ -633,8 +644,6 @@ def start():
                 if commands_exit==a:continue
                 elif commands_exit==b:break
 
-        scan_search_right()
-
         def scan_search_left():
             gimbal.set_rotate_speed(scan_speed)
             for i in range(2):
@@ -656,10 +665,15 @@ def start():
                 gimbal.angle_ctrl(randrotate,randangle)
 
                 if commands_exit==a:continue
-                elif commands_exit==b:gimbal.recenter()
-                gun_led_on_off[0]();break
+                elif commands_exit==b:break
 
-        scan_search_left()
+        func_list=[scan_search_right,scan_search_left]
+
+        randloop=random.randint(0,4)
+        for i in range(randloop):
+            random.shuffle(func_list)
+            func_list[0]()
+        gimbal.recenter()
 
 # Sleep Function:
 
@@ -678,8 +692,7 @@ def start():
                 led_set_top_bottom[1](define_armor_bottom_front_back[i],
                 RGB_COLOURS[i+1][0],RGB_COLOURS[i+1][1],
                 RGB_COLOURS[i+1][2],define_effect[3])
-            gimbal.recenter()
-            time.sleep(randdelay)
+            gimbal.recenter();time.sleep(randdelay)
 
             if commands_exit==a:continue
             elif commands_exit==b:break
@@ -689,9 +702,9 @@ def start():
     def single_led_chassis_follow_gimbal_rotation_right_left():
         robot.set_mode(define.robot_mode_chassis_follow)
         def single_led_chassis_follow_gimbal_rotation_right():
-            gimbal.set_rotate_speed(rotate_speed[1])    
+            gimbal.set_rotate_speed(rotate_speed[1])
             while True:
-                commands_exit=random.randint(a,c)
+                commands_exit=random.randint(a,b)
                 gun_led_on_off[1]()
                 for i in range(1,9):
                     gimbal.rotate(define.gimbal_right)
@@ -710,14 +723,12 @@ def start():
                     time.sleep(delay2);gun_led_on_off[0]()
 
                 if commands_exit==a:continue
-                elif commands_exit==c:break
-
-        single_led_chassis_follow_gimbal_rotation_right()
+                elif commands_exit==b:break
 
         def single_led_chassis_follow_gimbal_rotation_left():
             gimbal.set_rotate_speed(rotate_speed[1])
             while True:
-                commands_exit=random.randint(a,c)
+                commands_exit=random.randint(a,b)
                 gun_led_on_off[1]()
                 for i in range(8,0,-1):
                     gimbal.rotate(define.gimbal_left)
@@ -736,9 +747,16 @@ def start():
                     time.sleep(delay2);gun_led_on_off[0]()
 
                 if commands_exit==a:continue
-                elif commands_exit==c:break
+                elif commands_exit==b:break
 
-        single_led_chassis_follow_gimbal_rotation_left()
+        func_list=[
+        single_led_chassis_follow_gimbal_rotation_right,
+        single_led_chassis_follow_gimbal_rotation_left]
+
+        randloop=random.randint(0,4)
+        for i in range(randloop):
+            random.shuffle(func_list)
+            func_list[0]()
 
 # Double Led Chassis Follow Gimbal Rotation Right Left Function:
 
@@ -747,7 +765,7 @@ def start():
         def double_led_chassis_follow_gimbal_rotation_right():
             gimbal.set_rotate_speed(rotate_speed[4])
             while True:
-                commands_exit=random.randint(a,c)
+                commands_exit=random.randint(a,b)
                 gun_led_on_off[1]()
                 gimbal.rotate(define.gimbal_right)
                 for i in range(1,5):
@@ -764,14 +782,12 @@ def start():
                     time.sleep(delay2);gun_led_on_off[0]()
 
                 if commands_exit==a:continue
-                elif commands_exit==c:break
-
-        double_led_chassis_follow_gimbal_rotation_right()
+                elif commands_exit==b:break
 
         def double_led_chassis_follow_gimbal_rotation_left():
             gimbal.set_rotate_speed(rotate_speed[4])
             while True:
-                commands_exit=random.randint(a,c)
+                commands_exit=random.randint(a,b)
                 gun_led_on_off[1]()
                 gimbal.rotate(define.gimbal_left)
                 for i in range(4,0,-1):
@@ -790,9 +806,18 @@ def start():
                     time.sleep(delay2);gun_led_on_off[0]()
 
                 if commands_exit==a:continue
-                elif commands_exit==c:break
+                elif commands_exit==b:break
 
         double_led_chassis_follow_gimbal_rotation_left()
+
+        func_list=[
+        double_led_chassis_follow_gimbal_rotation_right,
+        double_led_chassis_follow_gimbal_rotation_left]
+
+        randloop=random.randint(0,4)
+        for i in range(randloop):
+            random.shuffle(func_list)
+            func_list[0]()
 
 # Quad Led Gimbal Rotation Up Down Function:
 
@@ -839,7 +864,7 @@ def start():
         def rgb_colour_trail_chasers_forward():
             gimbal.set_rotate_speed(rotate_speed[2])
             for i in range(1,8):
-                commands_exit=random.randint(a,c)
+                commands_exit=random.randint(a,b)
                 gun_led_on_off[1]()
                 gimbal.rotate(define.gimbal_right)
                 led_set_top_bottom[0](
@@ -862,15 +887,13 @@ def start():
                     time.sleep(delay2)
 
                 if commands_exit==a:continue
-                elif commands_exit==c:break
-
-        rgb_colour_trail_chasers_forward()
+                elif commands_exit==b:break
 
         def rgb_colour_trail_chasers_reverse():
             gimbal.rotate(define.gimbal_left)
 
             for i in range(1,8):
-                commands_exit=random.randint(a,c)
+                commands_exit=random.randint(a,b)
                 gun_led_on_off[1]()
                 gimbal.rotate(define.gimbal_left)
                 led_set_top_bottom[0](define_armor_top_bottom_all[0],
@@ -891,9 +914,16 @@ def start():
                     time.sleep(delay2)
 
                 if commands_exit==a:continue
-                elif commands_exit==c:break
+                elif commands_exit==b:break
 
-        rgb_colour_trail_chasers_reverse()
+        func_list=[
+        rgb_colour_trail_chasers_forward,
+        rgb_colour_trail_chasers_reverse]
+
+        randloop=random.randint(0,4)
+        for i in range(randloop):
+            random.shuffle(func_list)
+            func_list[0]()
 
 # RGB Colour Changers Forward Reverse Function:
 
@@ -901,7 +931,7 @@ def start():
         gimbal.stop()
         def rgb_colour_changers_forward():
             for i in range(1,8):
-                commands_exit=random.randint(a,c)
+                commands_exit=random.randint(a,b)
                 gun_led_on_off[1]()
                 led_set_top_bottom[0](define_armor_top_bottom_all[0],
                 RGB_COLOURS[i][0],RGB_COLOURS[i][1],
@@ -912,13 +942,13 @@ def start():
                 time.sleep(delay1);gun_led_on_off[0]()
 
                 if commands_exit==a:continue
-                elif commands_exit==c:break
+                elif commands_exit==b:break
 
         rgb_colour_changers_forward()
 
         def rgb_colour_changers_reverse():
             for i in range(7,0,-1):
-                commands_exit=random.randint(a,c)
+                commands_exit=random.randint(a,b)
                 gun_led_on_off[1]()
                 led_set_top_bottom[0](define_armor_top_bottom_all[0],
                 RGB_COLOURS[i][0],RGB_COLOURS[i][1],
@@ -929,7 +959,7 @@ def start():
                 time.sleep(delay1);gun_led_on_off[0]()
 
                 if commands_exit==a:continue
-                elif commands_exit==c:break
+                elif commands_exit==b:break
 
         rgb_colour_changers_reverse()
 
@@ -960,7 +990,7 @@ def start():
 # RGB Colour Flasher Functions:
 
     def rgb_red_yellow_flasher():
-        randloop=random.randint(0,10)
+        randloop=random.randint(0,5)
         gun_led_on_off[1]()
         for i in range(randloop):
             for j in range(2):
@@ -989,7 +1019,7 @@ def start():
         gun_led_on_off[0]()
 
     def rgb_blue_green_flasher():
-        randloop=random.randint(0,10)
+        randloop=random.randint(0,5)
         gun_led_on_off[1]()
         for i in range(randloop):
             for j in range(2):
@@ -1018,7 +1048,7 @@ def start():
         gun_led_on_off[0]()
 
     def rgb_pink_cyan_flasher():
-        randloop=random.randint(0,10)
+        randloop=random.randint(0,5)
         gun_led_on_off[1]()
         for i in range(randloop):
             for j in range(2):
@@ -1049,7 +1079,7 @@ def start():
 # RGB Colour Flipper Functions:
 
     def rgb_red_yellow_flipper():
-        randloop=random.randint(0,10)
+        randloop=random.randint(0,5)
         for i in range(randloop):
             for j in range(2):
                 gun_led_on_off[1]()
@@ -1071,7 +1101,7 @@ def start():
                 time.sleep(milli_seconds)
 
     def rgb_blue_green_flipper():
-        randloop=random.randint(0,10)
+        randloop=random.randint(0,5)
         for i in range(randloop):
             for j in range(2):
                 gun_led_on_off[1]()
@@ -1093,7 +1123,7 @@ def start():
                 time.sleep(milli_seconds)
 
     def rgb_pink_cyan_flipper():
-        randloop=random.randint(0,10)
+        randloop=random.randint(0,5)
         for i in range(randloop):
             for j in range(2):
                 gun_led_on_off[1]()
@@ -1263,8 +1293,8 @@ def start():
     while True:
         gun_led_on_off[0]()
         randweights_list=random.choices(
-        functions_list,weights=[100,100,100,50,100,50,5,15,15,
-        100,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15],k=1)
+        functions_list,weights=[100,100,100,50,100,50,5,10,10,
+        100,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10],k=1)
 
         randweights_list[0]()
 
